@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 50 50">
+  <path stroke="#37B29A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M17.955 12.475v-1.566c0-.865.7-1.565 1.565-1.565h10.96c.864 0 1.565.7 1.565 1.565v10.96c0 .864-.7 1.565-1.565 1.565H19.52a1.566 1.566 0 0 1-1.565-1.565v-6.263"/>
+  <path stroke="#37B29A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M22.652 15.606 25 13.258l2.348 2.348M25 19.52v-5.48m-5.48 12.526h10.96c.864 0 1.565.7 1.565 1.565v10.96c0 .864-.7 1.565-1.565 1.565H19.52c-.864 0-1.565-.7-1.565-1.565V28.13c0-.864.7-1.565 1.565-1.565Z"/>
+  <path stroke="#37B29A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M27.348 34.394 25 36.742l-2.348-2.348M25 30.48v5.48m10.177-1.566V28.13c0-.864.7-1.565 1.565-1.565h10.96c.865 0 1.566.7 1.566 1.565v10.96c0 .864-.701 1.565-1.566 1.565h-10.96c-.864 0-1.565-.7-1.565-1.565v-1.566"/>
+  <path stroke="#37B29A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m43.005 31.263 2.348 2.348-2.348 2.349m-3.914-2.349h5.48m-29.748-5.48v10.96c0 .864-.7 1.565-1.565 1.565H2.298c-.865 0-1.566-.7-1.566-1.565V28.13c0-.864.701-1.565 1.566-1.565h10.96c.864 0 1.565.7 1.565 1.565Z"/>
+  <path stroke="#37B29A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m6.995 35.96-2.348-2.35 2.348-2.348m3.914 2.348H5.43"/>
+</svg>
