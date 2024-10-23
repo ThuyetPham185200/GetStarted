@@ -5,6 +5,9 @@ TextField {
     id: control
     placeholderText: qsTr("Enter Something")
     color: "#37B29A"
+    placeholderTextColor: "#37B29A"
+    height: 25
+    font.pixelSize: 12
     background: Rectangle {
         implicitWidth: 100
         implicitHeight: 25
