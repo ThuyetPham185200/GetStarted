@@ -19,8 +19,8 @@ Rectangle {
     Text {
         z: icon.z + 1
         anchors.centerIn: parent
-        color: "#37B29A"
         text: parent.text_
+        color: "#37B29A"
         font.family: Constants.font.family
     }
 
@@ -50,4 +50,5 @@ Rectangle {
             }
         }
     ]
+
 }

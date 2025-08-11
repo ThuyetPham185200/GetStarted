@@ -44,7 +44,7 @@ Item {
         id: radar
         x: 25
         y: 32
-        source: "icons/export/Radar.svg"
+        source: "icons/Radar.svg"
         fillMode: Image.PreserveAspectFit
     }
 

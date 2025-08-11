@@ -22,7 +22,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         width: 34
         height: width
-        source: "images/api(2).png"
+        source: "images/api2.png"
         fillMode: Image.PreserveAspectFit
     }
 

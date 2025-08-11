@@ -11,6 +11,7 @@ Rectangle {
     radius: 5
     color: "#3C3F41"
     border.color: "#4DC7F1"
+    visible: width > 0
     Label {
         id: eo
         text: String(root)

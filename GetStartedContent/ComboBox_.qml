@@ -66,7 +66,7 @@ ComboBox {
         implicitHeight: 25
         border.color: control.pressed ? "#17a81a" : "#37B29A"
         border.width: control.visualFocus ? 2 : 1
-        radius: 2
+        //radius: 2
         color: "transparent"
     }
 
@@ -74,7 +74,7 @@ ComboBox {
         y: control.height - 1
         width: control.width
         implicitHeight: contentItem.implicitHeight
-        padding: 1
+        //padding: 1
 
         contentItem: ListView {
             clip: true
@@ -87,7 +87,7 @@ ComboBox {
 
         background: Rectangle {
             border.color: "#37B29A"
-            radius: 2
+            //radius: 2
             color: "transparent"
         }
     }

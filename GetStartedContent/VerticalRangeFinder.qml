@@ -136,7 +136,7 @@ Item {
                 y: 5
                 width: 28
                 height: width
-                source: "icons/export/Tracker(1).svg"
+                source: "icons/Tracker_1.svg"
                 fillMode: Image.PreserveAspectFit
             }
         }

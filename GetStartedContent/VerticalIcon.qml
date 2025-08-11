@@ -49,7 +49,7 @@ Rectangle {
         id: icon
         x: 8
         y: 8
-        source: "icons/export/EO.svg"
+        source: "icons/EO.svg"
         fillMode: Image.PreserveAspectFit
     }
 

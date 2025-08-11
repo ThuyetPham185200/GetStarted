@@ -21,7 +21,7 @@ Item {
         id: imgTarget
         width: 40
         height: 40
-        source: "icons/export/Virtual joinstick.svg"
+        source: "icons/Virtualjoinstick.svg"
         z: mouseArea.drag.active ||  mouseArea.pressed ? 2 : 1
         x: rectControl.x+rectControl.width/2-width/2
         y: rectControl.y+rectControl.height/2-height/2

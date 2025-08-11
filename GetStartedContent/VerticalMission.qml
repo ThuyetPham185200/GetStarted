@@ -19,13 +19,13 @@ Item {
     property alias currentIndex: contentSettings.currentIndex
 
     Label {
-        x: 150
+        x: 120
         y: 5
         z: root.z + 1
         horizontalAlignment: Text.AlignHCenter  // Horizontally align text in the center
         verticalAlignment: Text.AlignVCenter    // Vertically align text in the center
         font.family: Constants.font.family
-        text: "Mission"
+        text: "Survilance Object"
         color: "#37B293"
     }
 
@@ -38,13 +38,53 @@ Item {
         color: "#37B293"
     }
 
+    ListModel {
+        id: listFeatures
+        ListElement {name: "UAV"; icon_: "icons/UAV.svg"; choose_: true}
+        ListElement {name: "Missle"; icon_: "icons/Missile.svg"; choose_: false}
+        ListElement {name: "VTX Radar"; icon_: "icons/Radar.svg"; choose_: false}
+        ListElement {name: "Ship"; icon_: "icons/ship.svg"; choose_: false}
+    }
+
+    Column {
+        z: root.z + 1
+        anchors.left: parent.left
+        anchors.leftMargin: 25
+        anchors.bottom: parent.bottom
+        anchors.top: rectBorder.bottom
+        anchors.topMargin: 5
+        width: 50
+        spacing: 5
+
+        Repeater {
+            model: listFeatures
+            anchors.fill: parent
+            delegate: VerticalIcon {
+                bgVisile: choose_
+                iconSrc: icon_
+                title: name
+                onSelected: {
+                    for(var i = 0; i < listFeatures.count; i++) {
+                        listFeatures.setProperty(i, "choose_", false)
+                    }
+
+                    listFeatures.setProperty(index, "choose_", true)
+                    contentSettings.currentIndex = index
+                }
+            }
+        }
+    }
+
     StackLayout {
         id: contentSettings
         z: root.z + 1
-        x: 25
+        x: 100
         y: 25
-        VerticalMissionA1 {}
-        VerticalMissionS125 {}
+        width: 225
+        height: 450
+        VerticalMissionMissle {}
+        VerticalMissionUAV {}
+        VerticalMissionVTXRadar {}
     }
 
 }

@@ -74,7 +74,7 @@ Item {
         y: 0
         width: 25
         height: width
-        source: "icons/export/Close.svg"
+        source: "icons/Close.svg"
         fillMode: Image.PreserveAspectFit
         MouseArea {
             anchors.fill: parent

@@ -33,7 +33,7 @@ Rectangle {
                     anchors.left: parent.left
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.leftMargin: 4
-                    source: "images/signal(1).png"
+                    source: "images/signal1.png"
                     height: 25
                     width: 25
                 }

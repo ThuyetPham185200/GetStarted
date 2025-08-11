@@ -13,11 +13,12 @@ import QtQuick.Studio.Components 1.0
 import QtQuick.Studio.DesignEffects
 import GetStarted
 
-RectangleItem {
+Rectangle {
     id: root
-    width: root.hovered ? listFeatures.count * 80 + 4 : listFeatures.count * 81 - 15
-    height: /*root.hovered ? 110 :*/ 75
-    visible: root.hovered
+    width: 75
+    height: 80 * listFeatures.count
+
+    color: "transparent"
 
     Behavior on width {
         NumberAnimation { duration: 200; easing.type: Easing.InOutQuad }
@@ -28,11 +29,7 @@ RectangleItem {
     Behavior on visible {
         NumberAnimation { duration: 1000; easing.type: Easing.InOutQuad }
     }
-    layer.effect: mouseArea
-    fillColor: "#73ffffff"
-    strokeWidth: -1
-    strokeColor: "#2B2D2F"
-    adjustBorderRadius: true
+
     signal selected(int _currentIndex)
     property bool hovered: false
     ListModel {
@@ -45,9 +42,10 @@ RectangleItem {
         ListElement {name: "SRHawk Radar"; icon_: "icons/SRHawk.svg"; descript: "Kết nối, điều khiển, cấu hình SRHawk radar"}
         ListElement {name: "Range Finder"; icon_: "icons/RangeFinder.svg"; descript: "Xác định khoảng cách, vị trí mục tiêu bằng laser"}
         ListElement {name: "System Infomations"; icon_: "icons/SysInfor.svg"; descript: "Cung cấp toàn bộ thông tin của hệ thống"}
+        ListElement {name: "CH View"; icon_: "icons/Settings.svg"; descript: "Xác định khoảng cách, vị trí mục tiêu bằng laser"}
     }
 
-    Row {
+    Column {
         spacing: 10
         anchors.left: parent.left
         anchors.leftMargin: 2
@@ -65,7 +63,7 @@ RectangleItem {
                 radius: 5
                 opacity: 0.8
                 color: "#2B2D2F"
-                border.color: "#37B29A"
+                border.color:  "#37B29A"
                 Behavior on width {
                     NumberAnimation { duration: 50; easing.type: Easing.InOutQuad }
                 }
@@ -140,23 +138,18 @@ RectangleItem {
                     // When the mouse enters the polygon
                     onEntered: {
                         root.hovered = true;
-                        regularPolygon.width = 80// Increase width when hovering
-                        regularPolygon.height = 80 // Increase height when hovering
-                        symbol.width = 50
-                        textInput.font.pixelSize = 13
+                        regularPolygon.color = "white"
                     }
 
                     // When the mouse exits the polygon
                     onExited: {
                         root.hovered = false;
-                         symbol.width = 40
-                        regularPolygon.width = 70 // Return to original width
-                        regularPolygon.height = 70 // Return to original height
-                        textInput.font.pixelSize = 11
+                        regularPolygon.color = "#2B2D2F"
                     }
                     onClicked: {
-                        console.log("-- " + index)
-                        selectItem(model.index)
+                        root.selected(model.index)
+                        console.log("=================================== ")
+
                     }
                 }
             }
@@ -166,6 +159,6 @@ RectangleItem {
 
     // JavaScript function for handling the selection
     function selectItem(index) {
-        selected(index); // Emit the 'selected' signal with the correct index
+        root.selected(index); // Emit the 'selected' signal with the correct index
     }
 }
