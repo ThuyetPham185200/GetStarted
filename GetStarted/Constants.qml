@@ -109,6 +109,7 @@ QtObject {
     //     source: "../GetStartedContent/fonts/fa-v4compatibility.ttf"
     // }
     readonly property color backgroundColor: "#EAEAEA"
+    readonly property color transparentColor: "transparent"
 
 
     property StudioApplication application: StudioApplication {

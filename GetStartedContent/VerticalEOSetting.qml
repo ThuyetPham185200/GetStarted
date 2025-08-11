@@ -87,33 +87,6 @@ Item {
         }
     }
 
-    Rectangle {
-        x: 0
-        y: 355
-        width: 105
-        height: 25
-        color: "#00000000"
-        border.color: "#37b29a"
-        Label {
-            x: 5
-            y: 6
-            color: "#37b29a"
-            text: "COMMAND"
-            font.family: Constants.font.family
-            font.pixelSize: 11
-        }
-
-        Image {
-            id: okey
-            x: 87
-            y: 4
-
-            width: 17
-            height: 18
-            source: "icons/export/Okey.svg"
-            fillMode: Image.PreserveAspectFit
-        }
-    }
 
 
 

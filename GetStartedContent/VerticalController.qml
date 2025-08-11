@@ -183,7 +183,7 @@ Item {
             id: direction
             x: 33
             y: 36
-            source: "icons/export/Direction.svg"
+            source: "icons/Direction.svg"
             fillMode: Image.PreserveAspectFit
         }
 
@@ -199,7 +199,7 @@ Item {
             id: rKey
             x: 115
             y: 47
-            source: "icons/export/RKey.svg"
+            source: "icons/RKey.svg"
             fillMode: Image.PreserveAspectFit
         }
 
@@ -209,14 +209,14 @@ Item {
             y: 46
             width: 34
             height: 35
-            source: "icons/export/PlusKey.svg"
+            source: "icons/PlusKey.svg"
             fillMode: Image.PreserveAspectFit
         }
         Image {
             id: fKey
             x: 216
             y: 46
-            source: "icons/export/FKey.svg"
+            source: "icons/FKey.svg"
             fillMode: Image.PreserveAspectFit
         }
 
@@ -226,7 +226,7 @@ Item {
             y: 46
             width: 34
             height: 35
-            source: "icons/export/PlusKey.svg"
+            source: "icons/PlusKey.svg"
             fillMode: Image.PreserveAspectFit
         }
 

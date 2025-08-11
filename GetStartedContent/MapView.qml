@@ -11,6 +11,7 @@ Rectangle {
     color: "#3C3F41"
     border.color: "green"
     anchors.fill: parent
+    visible: width > 0
     Label {
         id: eo
         color: "#37B29A"

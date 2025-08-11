@@ -45,7 +45,7 @@ Item {
         }
         width: 20
         height: width
-        source: "icons/export/Tracker.svg"
+        source: "icons/Tracker.svg"
         //fillMode: Image.PreserveAspectFit
     }
 

@@ -40,12 +40,12 @@ Item {
 
     ListModel {
         id: listFeatures
-        ListElement {name: "System Connect"; icon_: "icons/export/Sys connect.svg"; choose_: true}
-        ListElement {name: "Streaming"; icon_: "icons/export/Streaming.svg"; choose_: false}
-        ListElement {name: "EO"; icon_: "icons/export/EO.svg"; choose_: false}
-        ListElement {name: "IR"; icon_: "icons/export/IR.svg"; choose_: false}
-        ListElement {name: "Track Algorithm"; icon_: "icons/export/Track.svg"; choose_: false}
-        ListElement {name: "Multi-lrss"; icon_: "icons/export/multi_lrss.svg"; choose_: false}
+        ListElement {name: "System Connect"; icon_: "icons/Sysconnect.svg"; choose_: true}
+        ListElement {name: "Streaming"; icon_: "icons/Streaming.svg"; choose_: false}
+        ListElement {name: "EO"; icon_: "icons/EO.svg"; choose_: false}
+        ListElement {name: "IR"; icon_: "icons/IR.svg"; choose_: false}
+        ListElement {name: "Track Algorithm"; icon_: "icons/Track.svg"; choose_: false}
+        ListElement {name: "Multi-lrss"; icon_: "icons/multi_lrss.svg"; choose_: false}
     }
 
 
