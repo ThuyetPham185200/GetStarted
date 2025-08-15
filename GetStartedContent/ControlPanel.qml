@@ -34,15 +34,17 @@ Rectangle {
     property bool hovered: false
     ListModel {
         id: listFeatures
-        ListElement {name: "Settings"; icon_: "icons/Settings.svg" ; descript: "Cấu hình camera (EO, IR), Track, System connect, Joystick, Track State"}
-        ListElement {name: "Controller"; icon_: "icons/Controller1.svg"; descript: "Điều khiển chuyển động của hệ thống bằng bàn phím, joystick ảo"}
-        ListElement {name: "Mission"; icon_: "icons/Mission.svg"; descript: "Cấu hình kết nối, điều khiển bắt bám mục tiêu"}
-        ListElement {name: "Cablib"; icon_: "icons/Calib.svg"; descript: "Cấu hình, hiệu chỉnh các góc ban đầu của hệ thống chuyển động Pan & Tilt"}
-        ListElement {name: "GPS Waypoints"; icon_: "icons/Waypoints.svg"; descript: "Tải waypoint, điều khiển di chuyển tới waypoint"}
-        ListElement {name: "SRHawk Radar"; icon_: "icons/SRHawk.svg"; descript: "Kết nối, điều khiển, cấu hình SRHawk radar"}
-        ListElement {name: "Range Finder"; icon_: "icons/RangeFinder.svg"; descript: "Xác định khoảng cách, vị trí mục tiêu bằng laser"}
-        ListElement {name: "System Infomations"; icon_: "icons/SysInfor.svg"; descript: "Cung cấp toàn bộ thông tin của hệ thống"}
-        ListElement {name: "CH View"; icon_: "icons/Settings.svg"; descript: "Xác định khoảng cách, vị trí mục tiêu bằng laser"}
+        ListElement {name: "Thiết bị"; icon_: "icons/Settings.svg" ; descript: "Cấu hình camera (EO, IR), Track, System connect, Joystick, Track State"}
+        ListElement {name: "TT Hiển thị"; icon_: "icons/TTDisplay.svg"; descript: "Điều khiển chuyển động của hệ thống bằng bàn phím, joystick ảo"}
+        ListElement {name: "Joystick"; icon_: "icons/Controller.svg"; descript: "Cấu hình kết nối, điều khiển bắt bám mục tiêu"}
+        ListElement {name: "Điều khiển"; icon_: "icons/controller_config.svg"; descript: "Cấu hình, hiệu chỉnh các góc ban đầu của hệ thống chuyển động Pan & Tilt"}
+        ListElement {name: "Bắt bám"; icon_: "icons/Tracking.svg"; descript: "Tải waypoint, điều khiển di chuyển tới waypoint"}
+        ListElement {name: "ĐT quan sát"; icon_: "icons/Mission.svg"; descript: "Kết nối, điều khiển, cấu hình SRHawk radar"}
+        ListElement {name: "Hiểu chuẩn"; icon_: "icons/Calib.svg"; descript: "Xác định khoảng cách, vị trí mục tiêu bằng laser"}
+        ListElement {name: "Mốc GPS"; icon_: "icons/Waypoints.svg"; descript: "Cung cấp toàn bộ thông tin của hệ thống"}
+        ListElement {name: "Phát video"; icon_: "icons/Forwarding.svg"; descript: "Cung cấp toàn bộ thông tin của hệ thống"}
+        ListElement {name: "Cài đặt"; icon_: "icons/SysInfor.svg"; descript: "Cung cấp toàn bộ thông tin của hệ thống"}
+        ListElement {name: "CH View"; icon_: "icons/download.svg"; descript: "Xác định khoảng cách, vị trí mục tiêu bằng laser"}
     }
 
     Column {
@@ -156,6 +158,8 @@ Rectangle {
 
         }
     }
+
+
 
     // JavaScript function for handling the selection
     function selectItem(index) {

@@ -64,7 +64,7 @@ Item {
                 // ❗ Gán lại cak = -1 trước khi xoá target
                 if (tile.Drag.target) {
                     tile.Drag.target.cak = -1
-                    //tile.Drag.target.tileLabel = ""
+                    tile.Drag.target.tileLabel = ""
 
                 }
 

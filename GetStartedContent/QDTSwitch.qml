@@ -1,20 +1,21 @@
-import QtQuick
-import QtQuick.Controls.Basic
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 import GetStarted
+
 SwitchDelegate {
     id: control
+    property string bColor: UIConstants.genBorderColor
+
     text: qsTr("SwitchDelegate")
-    checked: true
-    width: 150
-    height: 50
-    font.family: Constants.font.family
-    font.pixelSize: 11
+    checked: false
+    font { pixelSize: ScreenTools.mediumFontPointSize; family: UIConstants.customFont }
+
     contentItem: Text {
         leftPadding: control.indicator.width -10
         text: control.text
         font: control.font
         opacity: enabled ? 1.0 : 0.3
-        color: control.down ? "transparent" : "#37B29A"
+        color: control.down ? UIConstants.transparentColor : control.bColor
         elide: Text.ElideRight
         verticalAlignment: Text.AlignVCenter
     }
@@ -25,8 +26,8 @@ SwitchDelegate {
         x: 0
         y: parent.height / 2 - height / 2
         radius: 2
-        color: "transparent"
-        border.color:  "#37B29A"
+        color: UIConstants.transparentColor
+        border.color:  control.bColor
 
         Rectangle {
             x: control.checked ? parent.width - width - 2 : 2
@@ -34,16 +35,16 @@ SwitchDelegate {
             width: 21
             height: width
             radius: 2
-            color: control.down ? "#37B29A" : "transparent"
-            border.color: control.checked ? (control.down ? "#17a81a" : "#37B29A") : "#999999"
+            color: control.checked ? control.bColor : UIConstants.transparentColor
+            border.color: control.bColor
         }
     }
 
     background: Rectangle {
         implicitWidth: 100
         implicitHeight: 25
-        border.color: "#37B29A"
+        //border.color: control.bColor
         visible: control.down || control.highlighted
-        color: "transparent" //control.down ? "#bdbebf" : "#eeeeee"
+        color: UIConstants.transparentColor //control.down ? "#bdbebf" : "#eeeeee"
     }
 }

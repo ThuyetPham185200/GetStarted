@@ -15,9 +15,9 @@ Item {
 
     Component.onCompleted: {
         viewControlStore.mapViewComponent.parent = zeroView
-        viewControlStore.eoViewComponent.parent = oneView
+        viewControlStore.controlViewComponent.parent = oneView
         viewControlStore.irViewComponent.parent = twoView
-        viewControlStore.controlViewComponent.parent = threeView
+        viewControlStore.eoViewComponent.parent = threeView
     }
     Item {
         id: zeroView
@@ -79,6 +79,7 @@ Item {
         width: 5
         anchors.top: parent.top
         anchors.bottom: parent.bottom
+        x: 700
         Behavior on x {
             NumberAnimation { duration: 300 }
 
@@ -90,6 +91,7 @@ Item {
         id: horBorder1
         anchors.left: verBorder.right
         anchors.right: parent.right
+        y: 700
         height: 5
         Behavior on anchors.right {
             NumberAnimation { duration: 300 }

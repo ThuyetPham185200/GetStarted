@@ -3,8 +3,7 @@ import QtQuick.Controls 2.15
 import GetStarted
 Item {
     id: root
-    x: 83
-    y: 7
+
     width: 225
     height: 450
 
@@ -53,8 +52,8 @@ Item {
     }
 
     Rectangle {
-        x: 0
-        y: 200
+        x: 13
+        y: 184
         color: "transparent"
         border.color:"#37B29A"
         width: 105
@@ -86,6 +85,8 @@ Item {
             text: "ND 2"
         }
     }
+
+
 
 
 

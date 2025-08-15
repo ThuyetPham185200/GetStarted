@@ -180,40 +180,40 @@ Item {
         length: 225
     }
 
-    Label {
-        x: 0
-        y: 400
-        color: "#37b29a"
-        text: "Temperature range"
-        font.pixelSize: 11
-        font.family: Constants.font.family
-    }
+    // Label {
+    //     x: 0
+    //     y: 400
+    //     color: "#37b29a"
+    //     text: "Temperature range"
+    //     font.pixelSize: 11
+    //     font.family: Constants.font.family
+    // }
 
 
-    Rectangle {
-        y: 419
-        width: 159
-        height: 29
-        radius: 2
-        anchors.left: parent.left
-        anchors.leftMargin: 0
+    // Rectangle {
+    //     y: 419
+    //     width: 159
+    //     height: 29
+    //     radius: 2
+    //     anchors.left: parent.left
+    //     anchors.leftMargin: 0
 
-        Row {
-            anchors.centerIn: parent
-            spacing: 1
-            Repeater {
-                anchors.fill: parent
-                model: 6
-                delegate: Button_ {
-                    width: 25
-                    height: 25
-                    text: String(index + 1)
-                }
-            }
-        }
-        border.color: "#37b29a"
-        color: "transparent"
+    //     Row {
+    //         anchors.centerIn: parent
+    //         spacing: 1
+    //         Repeater {
+    //             anchors.fill: parent
+    //             model: 6
+    //             delegate: Button_ {
+    //                 width: 25
+    //                 height: 25
+    //                 text: String(index + 1)
+    //             }
+    //         }
+    //     }
+    //     border.color: "#37b29a"
+    //     color: "transparent"
 
-    }
+    // }
 
 }

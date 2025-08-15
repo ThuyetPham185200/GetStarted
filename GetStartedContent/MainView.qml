@@ -10,9 +10,10 @@ Rectangle {
     property string mission: "A1"
 
     property var mainWindow
-
+    property var listView: []
     QDTCustomTitleBar {
         id: statusBar
+        z: main.z  + 3
         mainWindow: root.mainWindow
         gradient: Gradient {
             GradientStop { position: 0.0; color: "#3C3F41" }  // Olive Drab
@@ -23,6 +24,28 @@ Rectangle {
         anchors.right: parent.right
         anchors.top: parent.top
         height: 40
+
+        ComboboxStyle {
+            id: irMode
+            z: statusBar.z  + 1
+            x: 300
+            y : 5
+            title: "Ngày"
+            onClicked: {
+                zoomMode.hidden()
+            }
+        }
+
+        ComboboxStyle {
+            id: zoomMode
+            z: statusBar.z  + 1
+            x: 400
+            y : 5
+            title: "Zoom"
+            onClicked: {
+                irMode.hidden()
+            }
+        }
     }
 
     Item {
@@ -58,7 +81,10 @@ Rectangle {
                 Connections {
                     target:panels
                     function onSelected(_currentIndex) {
-                        selectView.visible = true
+                        // for (var i = 0; i < root.listView.length; i ++) {
+                        //     root.listView[i].visible = false
+                        // }
+                        root.listView[_currentIndex].visible = true
                     }
                 }
 
@@ -67,6 +93,16 @@ Rectangle {
             }
         }
 
+    }
+    Component.onCompleted:  {
+        root.listView.push(ctrlDevice)
+        root.listView.push(selectView)
+
+    }
+
+    ControlDevice {
+        visible: false
+        id: ctrlDevice
     }
 
     SelectView {
@@ -99,6 +135,11 @@ Rectangle {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
+            FourView {
+                id: fourView_
+                viewControlStore: viewControlStore_
+            }
+
             TwoView {
                 id: twoView_
                 viewControlStore: viewControlStore_
@@ -107,10 +148,7 @@ Rectangle {
                 id: threeView_
                 viewControlStore: viewControlStore_
             }
-            FourView {
-                id: fourView_
-                viewControlStore: viewControlStore_
-            }
+
         }
 
     }
