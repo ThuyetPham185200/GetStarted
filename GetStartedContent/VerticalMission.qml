@@ -40,10 +40,10 @@ Item {
 
     ListModel {
         id: listFeatures
-        ListElement {name: "UAV"; icon_: "icons/UAV.svg"; choose_: true}
-        ListElement {name: "Missle"; icon_: "icons/Missile.svg"; choose_: false}
-        ListElement {name: "VTX Radar"; icon_: "icons/Radar.svg"; choose_: false}
-        ListElement {name: "Ship"; icon_: "icons/ship.svg"; choose_: false}
+        ListElement {name: "EO"; icon_: "icons/UAV.svg"; choose_: true}
+        ListElement {name: "IR"; icon_: "icons/Missile.svg"; choose_: false}
+        ListElement {name: "JS ảo"; icon_: "icons/Radar.svg"; choose_: false}
+        ListElement {name: "Gimbal"; icon_: "icons/ship.svg"; choose_: false}
     }
 
     Column {

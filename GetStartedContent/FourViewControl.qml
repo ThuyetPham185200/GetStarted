@@ -88,8 +88,8 @@ Rectangle {
                     id: colorModel
                     ListElement { color: "#2B2D2F"; width_ : 80; height_: 80; text_ : "MAP" }
                     ListElement { color: "#2B2D2F"; width_ : 80; height_: 80; text_ : "IR" }
-                    ListElement { color: "#2B2D2F"; width_ : 80; height_: 80; text_ : "EO" }
                     ListElement { color: "#2B2D2F"; width_ : 80; height_: 80; text_ : "CTRL" }
+                    ListElement { color: "#2B2D2F"; width_ : 80; height_: 80; text_ : "EO" }
                 }
 
                 delegate: DropArea {

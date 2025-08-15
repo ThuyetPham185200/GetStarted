@@ -2,8 +2,18 @@
 ### Do not change
 
 set_source_files_properties(Constants.qml
-    PROPERTIES
-        QT_QML_SINGLETON_TYPE true
+	PROPERTIES
+		QT_QML_SINGLETON_TYPE true
+)
+
+set_source_files_properties(ScreenTools.qml
+	PROPERTIES
+		QT_QML_SINGLETON_TYPE true
+)
+
+set_source_files_properties(UIConstants.qml
+	PROPERTIES
+		QT_QML_SINGLETON_TYPE true
 )
 
 
@@ -13,11 +23,13 @@ qt6_add_qml_module(GetStarted
     URI "GetStarted"
     VERSION 1.0
     RESOURCE_PREFIX "/qt/qml"
-    QML_FILES
-        "Constants.qml"
-        "EventListModel.qml"
-        "DirectoryFontLoader.qml"
-        "EventListSimulator.qml"
+	QML_FILES
+		"Constants.qml"
+		"EventListSimulator.qml"
+		"EventListModel.qml"
+		"DirectoryFontLoader.qml"
+		"UIConstants.qml"
+		"ScreenTools.qml"
 )
 
 

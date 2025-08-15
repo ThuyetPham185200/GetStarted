@@ -4,7 +4,7 @@ import GetStarted
 Rectangle {
     id: root
 
-    property string bColor: "#4DC7F1"
+    property string bColor: UIConstants.genBorderColor
 
     border.color: root.bColor
     radius: 2
@@ -12,12 +12,12 @@ Rectangle {
     height: 35
 
 
-    property alias iconSrc: icon.source
+    property alias iconSrc: icon.src
     property alias title: text_.text
     property alias bgVisile: bg1.visible
     signal selected()
 
-    color: "transparent"
+    color: UIConstants.transparentColor
 
     Rectangle {
         id: bg
@@ -30,7 +30,7 @@ Rectangle {
         anchors.top: parent.top
         anchors.topMargin: 1
         gradient: Gradient {
-            GradientStop { position: 0.0; color:"transparent"}   // Bottom
+            GradientStop { position: 0.0; color: UIConstants.transparentColor }   // Bottom
             GradientStop { position: 1.0; color: root.bColor } // Top
         }
         opacity: 0.5
@@ -52,11 +52,11 @@ Rectangle {
         visible: false
     }
 
-    Image {
+    QDTSVGIcon {
         id: icon
         x: 8
         y: 1
-        source: "icons/EO.svg"
+        bColor: root.bColor
     }
 
     Label {
@@ -65,11 +65,12 @@ Rectangle {
         width: 25
         height: 18
         anchors.horizontalCenter: parent.horizontalCenter
+        text: "EO"
         color: root.bColor
         horizontalAlignment: Text.AlignHCenter  // Horizontally align text in the center
         verticalAlignment: Text.AlignVCenter
         anchors.horizontalCenterOffset: 21    // Vertically align text in the center
-        font { pixelSize:21; }
+        font { pixelSize: ScreenTools.mediumFontPointSize; family: UIConstants.customFont }
         elide: Qt.ElideRight
     }
 

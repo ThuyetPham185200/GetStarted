@@ -30,7 +30,7 @@ Rectangle {
 
     AzRadarWindow {
         anchors.centerIn: parent
-        anchors.horizontalCenterOffset: -200
+        anchors.horizontalCenterOffset: -100
         width: 300
         height: 300
 

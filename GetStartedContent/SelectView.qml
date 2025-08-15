@@ -85,14 +85,15 @@ ApplicationWindow {
         id: view
         x: 506
         y: 69
+        FourPreview {
+            id: fourPreview
+        }
+
         TwoPreview {
             id: twoPreview
         }
         ThreePreview {
             id: threePreview
-        }
-        FourPreview {
-            id: fourPreview
         }
     }
 
@@ -113,12 +114,15 @@ ApplicationWindow {
 
         CustomButton {
             text: "Cancel"
-            onClicked: root.close()
+            onClicked: {
+                dragFuncList.returnAscestor()
+                root.close()}
         }
 
         CustomButton {
             text: "Accept"
             onClicked: {
+                dragFuncList.returnAscestor()
                 root.close()
                 handle()
                 root.accepted(view.currentIndex)
@@ -128,51 +132,67 @@ ApplicationWindow {
 
 
     function handle() {
-        if(view.currentIndex === 0) {
+        if(view.currentIndex === 1) {
             if(twoPreview.dropItem0) {
+                console.log("twoPreview.dropItem0 " + twoPreview.dropItem0.tileLabel)
+                console.log("twoPreview.dropItem0 " + twoPreview.dropItem0.cak)
                 viewControlStore.mapView[twoPreview.dropItem0.tileLabel].parent = twoView.listView[twoPreview.dropItem0.cak]
                 twoView.viewControl.changeItem(0, twoPreview.dropItem0.tileLabel)
             }
             if(twoPreview.dropItem1) {
+                console.log("twoPreview.dropItem1 " + twoPreview.dropItem1.tileLabel)
+                console.log("twoPreview.dropItem1 " + twoPreview.dropItem1.cak)
                 viewControlStore.mapView[twoPreview.dropItem1.tileLabel].parent = twoView.listView[twoPreview.dropItem1.cak]
                 twoView.viewControl.changeItem(1, twoPreview.dropItem1.tileLabel)
             }
-        } else if(view.currentIndex === 1) {
-            console.log("============dd==================== " + threePreview.dropItem0.cak)
+        } else if(view.currentIndex === 2) {
             console.log(threeView.listView)
             if(threePreview.dropItem0) {
+                console.log("threePreview.dropItem0 " + threePreview.dropItem0.tileLabel)
+                console.log("threePreview.dropItem0 " + threePreview.dropItem0.cak)
+
                 viewControlStore.mapView[threePreview.dropItem0.tileLabel].parent = threeView.listView[threePreview.dropItem0.cak]
                 threeView.viewControl.changeItem(0, threePreview.dropItem0.tileLabel)
             }
             if(threePreview.dropItem1) {
+                console.log("threePreview.dropItem1 " + threePreview.dropItem1.tileLabel)
+                console.log("threePreview.dropItem1 " + threePreview.dropItem1.cak)
                 viewControlStore.mapView[threePreview.dropItem1.tileLabel].parent = threeView.listView[threePreview.dropItem1.cak]
                 threeView.viewControl.changeItem(1, threePreview.dropItem1.tileLabel)
 
             }
             if(threePreview.dropItem2) {
+                console.log("threePreview.dropItem2 " + threePreview.dropItem2.tileLabel)
+                console.log("threePreview.dropItem2 " + threePreview.dropItem2.cak)
                 viewControlStore.mapView[threePreview.dropItem2.tileLabel].parent = threeView.listView[threePreview.dropItem2.cak]
                 threeView.viewControl.changeItem(2, threePreview.dropItem2.tileLabel)
 
             }
-        }  else if(view.currentIndex === 2) {
+        }  else if(view.currentIndex === 0) {
             if(fourPreview.dropItem0) {
-                console.log(fourPreview.dropItem0.tileLabel)
-                console.log(fourPreview.dropItem0.cak)
+                console.log("fourPreview.dropItem0 " + fourPreview.dropItem0.tileLabel)
+                console.log("fourPreview.dropItem0 " + fourPreview.dropItem0.cak)
 
                 viewControlStore.mapView[fourPreview.dropItem0.tileLabel].parent = fourView.listView[fourPreview.dropItem0.cak]
                 fourView.viewControl.changeItem(0, fourPreview.dropItem0.tileLabel)
 
             }
             if(fourPreview.dropItem1) {
-                viewControlStore.mapView[fourPreview.dropItem1.tileLabel].parent = fourView.listView[fourPreview.dropItem1.cak]
+                console.log("fourPreview.dropItem1 " + fourPreview.dropItem1.tileLabel)
+                console.log("fourPreview.dropItem1 " + fourPreview.dropItem1.cak)
+                viewControlStore.mapView[fourPreview.dropItem1.tileLabel].parent = fourView.listView[fourPreview.dropItem2.cak]
                 fourView.viewControl.changeItem(1, fourPreview.dropItem1.tileLabel)
             }
             if(fourPreview.dropItem2) {
-                viewControlStore.mapView[fourPreview.dropItem2.tileLabel].parent = fourView.listView[fourPreview.dropItem2.cak]
+                console.log("fourPreview.dropItem2 " + fourPreview.dropItem2.tileLabel)
+                console.log("fourPreview.dropItem2 " + fourPreview.dropItem2.cak)
+                viewControlStore.mapView[fourPreview.dropItem2.tileLabel].parent = fourView.listView[fourPreview.dropItem1.cak]
                 fourView.viewControl.changeItem(2, fourPreview.dropItem2.tileLabel)
 
             }
             if(fourPreview.dropItem3) {
+                console.log("fourPreview.dropItem3 " + fourPreview.dropItem3.tileLabel)
+                console.log("fourPreview.dropItem3 " + fourPreview.dropItem3.cak)
                 viewControlStore.mapView[fourPreview.dropItem3.tileLabel].parent = fourView.listView[fourPreview.dropItem3.cak]
                 fourView.viewControl.changeItem(3, fourPreview.dropItem3.tileLabel)
             }
