@@ -25,26 +25,97 @@ Rectangle {
         anchors.top: parent.top
         height: 40
 
-        ComboboxStyle {
-            id: irMode
-            z: statusBar.z  + 1
-            x: 300
-            y : 5
-            title: "Ngày"
-            onClicked: {
-                zoomMode.hidden()
+        // ComboboxStyle {
+        //     id: irMode
+        //     z: statusBar.z  + 1
+        //     x: 300
+        //     y : 5
+        //     title: "Ngày"
+        //     onClicked: {
+        //         zoomMode.hidden()
+        //     }
+        // }
+
+        // ComboboxStyle {
+        //     id: zoomMode
+        //     z: statusBar.z  + 1
+        //     x: 400
+        //     y : 5
+        //     title: "Zoom"
+        //     onClicked: {
+        //         irMode.hidden()
+        //     }
+        // }
+
+        Label {
+            id: cameraActivelb
+            font.family: UIConstants.customFont
+            x: 200
+            y: 10
+            color: "white"
+            text: "Camera Active"
+        }
+
+        VerticalMenu {
+            id: cameraActiveMenu
+            anchors.left: cameraActivelb.right
+            anchors.leftMargin:  10
+            y: 7
+            Connections {
+                target: verticalMenu
+                function onSelected(index) {
+                }
+            }
+            menuModel: ListModel {
+                ListElement {tit: "Ảnh ngày"; checked: true}
+                ListElement {tit: "Ảnh nhiệt"; checked: false}
             }
         }
 
-        ComboboxStyle {
-            id: zoomMode
-            z: statusBar.z  + 1
-            x: 400
-            y : 5
-            title: "Zoom"
-            onClicked: {
-                irMode.hidden()
+        Label {
+            id: zoomfocuslb
+            font.family: UIConstants.customFont
+            x: 500
+            y: 10
+            color: "white"
+            text: "JS Zoom/Focus"
+        }
+
+        VerticalMenu {
+            id: cameraActivezoomfocus
+            anchors.left: zoomfocuslb.right
+            anchors.leftMargin:  10
+            y: 7
+            Connections {
+                target: verticalMenu
+                function onSelected(index) {
+                }
             }
+            menuModel: ListModel {
+                ListElement {tit: "Zoom"; checked: true}
+                ListElement {tit: "Focus"; checked: false}
+            }
+        }
+
+        Image {
+            id: dd
+            anchors.right: dd1.left
+            anchors.rightMargin: 25
+            y: 7
+            height: 25
+            source: "images/signal1.png"
+            fillMode: Image.PreserveAspectFit
+        }
+
+
+        Image {
+            id: dd1
+            anchors.right: parent.right
+            anchors.rightMargin: 150
+            y: 7
+            height: 25
+            source: "images/alert1.png"
+            fillMode: Image.PreserveAspectFit
         }
     }
 
@@ -96,6 +167,16 @@ Rectangle {
     }
     Component.onCompleted:  {
         root.listView.push(ctrlDevice)
+        root.listView.push(ttht)
+        root.listView.push(js)
+        root.listView.push(dk)
+        root.listView.push(bb)
+        root.listView.push(dtqs)
+        root.listView.push(hc)
+        root.listView.push(mgps)
+        root.listView.push(pv)
+        root.listView.push(cd)
+
         root.listView.push(selectView)
 
     }
@@ -105,6 +186,51 @@ Rectangle {
         id: ctrlDevice
     }
 
+    TTHT  {
+
+
+        visible: false
+        id: ttht
+    }
+
+    JS {
+        visible: false
+        id: js
+    }
+
+    DK {
+        id: dk
+        visible: false
+    }
+
+    BB {
+        visible: false
+        id: bb
+    }
+
+    DTQS {
+        visible: false
+        id: dtqs
+    }
+
+    HC {
+        visible: false
+        id: hc
+    }
+
+    MGPS {
+        visible: false
+        id: mgps
+    }
+
+    PV {
+        visible: false
+        id: pv
+    }
+    CD {
+        visible: false
+        id: cd
+    }
     SelectView {
         id: selectView
         visible: false

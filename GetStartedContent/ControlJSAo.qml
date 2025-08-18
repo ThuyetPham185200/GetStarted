@@ -15,7 +15,8 @@ Item {
         color: "#37b29a"
         text: "Joystich Ảo"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     VirtualJoystick {
@@ -33,7 +34,8 @@ Item {
         color: "#37b29a"
         text: "Chọn chế độ Zoom/EO"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Rectangle {

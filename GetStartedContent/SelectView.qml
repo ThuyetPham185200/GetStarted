@@ -42,7 +42,7 @@ ApplicationWindow {
         x: 62
         y: 24
         onClicked: {
-            view.currentIndex = 0
+            view.currentIndex = 1
             dragFuncList.returnAscestor()
         }
     }
@@ -53,7 +53,7 @@ ApplicationWindow {
         width: 206
         height: 184
         onClicked: {
-            view.currentIndex = 1
+            view.currentIndex = 2
             dragFuncList.returnAscestor()
         }
     }
@@ -63,7 +63,7 @@ ApplicationWindow {
         y: 460
 
         onClicked: {
-            view.currentIndex = 2
+            view.currentIndex = 0
             dragFuncList.returnAscestor()
         }
     }

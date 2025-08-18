@@ -18,8 +18,9 @@ ComboBox {
         contentItem: Text {
             text: delegate.model[control.textRole]
             color: "#37B29A"
-            font: control.font
             elide: Text.ElideRight
+            font.family: UIConstants.customFont
+
             verticalAlignment: Text.AlignVCenter
 
         }

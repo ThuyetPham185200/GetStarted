@@ -17,6 +17,8 @@ SwitchDelegate {
         color: control.down ? "transparent" : "#37B29A"
         elide: Text.ElideRight
         verticalAlignment: Text.AlignVCenter
+        font.family: UIConstants.customFont
+
     }
 
     indicator: Rectangle {

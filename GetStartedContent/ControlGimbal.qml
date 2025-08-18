@@ -15,7 +15,8 @@ Item {
         color: "#37b29a"
         text: "Đặt giá trị vận tốc lớn nhất cho Pan, Tilt"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -26,7 +27,8 @@ Item {
         color: "#37b29a"
         text: "Đi tới vị trí Azimuth, Elevation"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -37,7 +39,8 @@ Item {
         color: "#37b29a"
         text: "Azimuth"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -48,7 +51,8 @@ Item {
         color: "#37b29a"
         text: "Elevation"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     // TextField_ {
@@ -87,7 +91,8 @@ Item {
         color: "#37b29a"
         text: "deg"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -98,7 +103,8 @@ Item {
         color: "#37b29a"
         text: "deg"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Button_ {
@@ -118,7 +124,8 @@ Item {
         color: "#37b29a"
         text: "Đừng khẩn cấp"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Button_ {
@@ -138,7 +145,8 @@ Item {
         color: "#37b29a"
         text: "Vận tốc Pan tối đa"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -149,7 +157,8 @@ Item {
         color: "#37b29a"
         text: "Vận tốc Tilt tối đa"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     // TextField_ {
@@ -184,7 +193,8 @@ Item {
         color: "#37b29a"
         text: "deg/s"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -195,7 +205,8 @@ Item {
         color: "#37b29a"
         text: "deg/s"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Button_ {
@@ -215,7 +226,8 @@ Item {
         color: "#37b29a"
         text: "0.00"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -226,7 +238,8 @@ Item {
         color: "#37b29a"
         text: "0.00"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
 

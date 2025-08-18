@@ -8,7 +8,10 @@ ApplicationWindow {
     title: "Thiết bị"
     width: 1000
     height: 800
-
+    minimumHeight: 800
+    minimumWidth: 1000
+    maximumHeight: 800
+    maximumWidth: 1000
     Rectangle {
         id: bg
         anchors.fill: parent
@@ -151,7 +154,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "Đặt giá trị vận tốc lớn nhất cho Pan, Tilt"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Label {
@@ -162,7 +166,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "Đi tới vị trí Azimuth, Elevation"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Label {
@@ -173,7 +178,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "Azimuth"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Label {
@@ -184,7 +190,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "Elevation"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             QDTTextField {
@@ -211,7 +218,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "deg"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Label {
@@ -222,7 +230,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "deg"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Button_ {
@@ -242,7 +251,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "Vận tốc Pan tối đa"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Label {
@@ -253,7 +263,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "Vận tốc Tilt tối đa"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             QDTTextField {
@@ -280,7 +291,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "deg/s"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Label {
@@ -291,7 +303,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "deg/s"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Button_ {
@@ -311,7 +324,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "0.00"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
 
             Label {
@@ -322,7 +336,8 @@ ApplicationWindow {
             color: "#37b29a"
             text: "0.00"
             font.pixelSize: 14
-            font.family: Constants.font.family
+                    font.family: UIConstants.customFont
+
             }
             Button_ {
                 id: button_1

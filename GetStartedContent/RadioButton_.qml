@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls.Basic
+import GetStarted
 
 RadioDelegate {
     id: control
@@ -13,6 +14,8 @@ RadioDelegate {
         opacity: enabled ? 1.0 : 0.3
         color: control.down ? "#17a81a" : "#37B29A"
         elide: Text.ElideRight
+        font.family: UIConstants.customFont
+
         verticalAlignment: Text.AlignVCenter
     }
 

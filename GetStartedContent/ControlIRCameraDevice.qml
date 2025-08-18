@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import GetStarted
 
 Item {
     id: root
@@ -22,7 +23,8 @@ Item {
         color: "#37b29a"
         text: "Độ sáng (%)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -33,7 +35,8 @@ Item {
         color: "#37b29a"
         text: "Chế độ AGC"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Image {
@@ -63,7 +66,8 @@ Item {
         color: "#37b29a"
         text: "Chế độ Nuc"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Button_ {
@@ -83,7 +87,8 @@ Item {
         color: "#37b29a"
         text: "Độ tương phản (%)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Slider_ {

@@ -78,6 +78,7 @@ Item {
         width: 5
         anchors.top: parent.top
         anchors.bottom: parent.bottom
+        x: 700
         Behavior on x {
             NumberAnimation { duration: 300 }
 

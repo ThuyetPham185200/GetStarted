@@ -31,6 +31,7 @@ Item {
         width: 51
         height: 25
         text: "NUC 3"
+        font.family: UIConstants.customFont
         font.pixelSize: 11
     }
 
@@ -39,6 +40,7 @@ Item {
         y: 67
         font.pixelSize: 13
         text: "Brightness"
+
         font.family: Constants.font.family
         color: "#37B29A"
 

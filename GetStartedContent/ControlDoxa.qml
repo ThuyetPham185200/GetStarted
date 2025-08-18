@@ -15,7 +15,7 @@ Item {
         color: "#37b29a"
         text: "Latitude (deg)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+        font.family: UIConstants.customFont
     }
 
     // TextField_ {
@@ -43,7 +43,7 @@ Item {
         color: "#37b29a"
         text: "Vị trí thiết bị"
         font.pixelSize: 14
-        font.family: Constants.font.family
+        font.family: UIConstants.customFont
     }
 
     // TextField_ {
@@ -77,7 +77,7 @@ Item {
         color: "#37b29a"
         text: "Altitude (deg)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+        font.family: UIConstants.customFont
     }
 
     Label {
@@ -88,7 +88,7 @@ Item {
         color: "#37b29a"
         text: "Longtitude (deg)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+        font.family: UIConstants.customFont
     }
 
     // TextField_ {
@@ -137,7 +137,7 @@ Item {
         color: "#37b29a"
         text: "Đo xa"
         font.pixelSize: 14
-        font.family: Constants.font.family
+        font.family: UIConstants.customFont
     }
 
     Button_ {
@@ -157,7 +157,7 @@ Item {
         color: "#37b29a"
         text: "Latitude (deg)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+        font.family: UIConstants.customFont
     }
 
     Label {
@@ -168,7 +168,7 @@ Item {
         color: "#37b29a"
         text: "Altitude (deg)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+        font.family: UIConstants.customFont
     }
 
     Label {
@@ -179,7 +179,8 @@ Item {
         color: "#37b29a"
         text: "Longtitude (deg)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -190,7 +191,8 @@ Item {
         color: "#37b29a"
         text: "23.3456"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -201,7 +203,8 @@ Item {
         color: "#37b29a"
         text: "23.3456"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -212,7 +215,8 @@ Item {
         color: "#37b29a"
         text: "23.3456"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -223,7 +227,8 @@ Item {
         color: "#37b29a"
         text: "Mục tiêu"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -234,7 +239,8 @@ Item {
         color: "#37b29a"
         text: "Khoảng cách (m)"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Label {
@@ -245,6 +251,7 @@ Item {
         color: "#37b29a"
         text: "23.3456"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 }

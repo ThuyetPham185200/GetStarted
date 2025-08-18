@@ -1,9 +1,15 @@
 import QtQuick
 import QtQuick.Controls.Basic
+import GetStarted
 
 Slider {
     id: control
-    value: 0.5
+    from: 0
+    to: 100
+    value: 50
+
+    width: 300
+    height: 60
 
     background: Rectangle {
         x: control.leftPadding
@@ -24,6 +30,7 @@ Slider {
     }
 
     handle: Rectangle {
+        id: handleRect
         x: control.leftPadding + control.visualPosition * (control.availableWidth - width)
         y: control.topPadding + control.availableHeight / 2 - height / 2
         implicitWidth: 13
@@ -31,5 +38,38 @@ Slider {
         radius: 13
         color: control.pressed ? "#f0f0f0" : "#f6f6f6"
         border.color: "#bdbebf"
+    }
+
+    // Label hiển thị giá trị from (bên trái)
+    Label {
+        text: control.from
+        anchors.top: parent.top
+        anchors.topMargin: 20
+        anchors.left: control.left
+        anchors.leftMargin: 0
+        font.family: UIConstants.customFont
+        color: UIConstants.genBorderColor
+
+    }
+
+    // Label hiển thị giá trị to (bên phải)
+    Label {
+        text: control.to
+        anchors.top: parent.top
+        anchors.topMargin: 20
+        anchors.right: control.right
+        anchors.rightMargin: 0
+        font.family: UIConstants.customFont
+        color: UIConstants.genBorderColor
+    }
+
+    // Label hiển thị giá trị hiện tại (theo handle)
+    Label {
+        text: Math.round(control.value)
+        anchors.horizontalCenter: handleRect.horizontalCenter
+        anchors.bottom: handleRect.top
+        anchors.bottomMargin: 5
+        font.family: UIConstants.customFont
+        color: UIConstants.genBorderColor
     }
 }

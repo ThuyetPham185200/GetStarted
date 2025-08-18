@@ -174,14 +174,15 @@ Rectangle {
     id: root
     width: parent.width
     height: parent.height
+
     property string name: "CTRL"
     //radius: 5
     color: "#3C3F41"
 
     VerticalMenu {
         id: verticalMenu
-        x: 16
-        y: 17
+        x: 0
+        y: 0
         Connections {
             target: verticalMenu
             function onSelected(index) {
@@ -190,27 +191,38 @@ Rectangle {
         }
     }
 
-    StackLayout {
-        id: view
+    Rectangle {
+        id: bounding
+        z: verticalMenu.z + 1
         anchors.top: verticalMenu.bottom
         anchors.topMargin: 5
-        anchors.left: verticalMenu.left
-        anchors.leftMargin: 10
-        anchors.right: verticalMenu.right
-        anchors.rightMargin: 10
-        anchors.bottom: verticalMenu.bottom
-        anchors.bottomMargin: 25
+        anchors.left: parent.left
+        anchors.leftMargin: 5
+        anchors.right: parent.right
+        anchors.rightMargin: 5
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 5
+        color: UIConstants.transparentColor
+        border.color: UIConstants.genBorderColor
+        border.width: 1
+        radius: 3
 
-        ControlCamera {
-        }
+        StackLayout {
+            id: view
+            anchors.fill: parent
+            ControlCamera {
+            }
 
-        ControlJSAo {
+            ControlJSAo {
 
-        }
+            }
 
-        ControlGimbal {
-        }
-        ControlDoxa {
+            ControlGimbal {
+            }
+
+            ControlDoxa {
+            }
+
         }
     }
 

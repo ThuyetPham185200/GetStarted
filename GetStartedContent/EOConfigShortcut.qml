@@ -11,7 +11,7 @@ Item {
         id: slider_
         x: 167
         y: 109
-        width: 284
+        width: 325
         height: 25
     }
 
@@ -23,7 +23,8 @@ Item {
         color: "#37b29a"
         text: "Giá trị chỉnh tay"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     QDTSwitch {
@@ -42,7 +43,8 @@ Item {
         color: "#37b29a"
         text: "Chế độ chỉnh tay"
         font.pixelSize: 14
-        font.family: Constants.font.family
+                font.family: UIConstants.customFont
+
     }
 
     Item {
