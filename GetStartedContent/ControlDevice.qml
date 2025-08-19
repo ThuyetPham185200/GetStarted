@@ -26,8 +26,9 @@ ApplicationWindow {
             border.color: UIConstants.genBorderColor
             VerticalMenu {
                 id: verticalMenu
-                x: 8
-                y: 8
+
+                x: 115
+                y: 1
                 menuModel: ListModel {
                     ListElement {
                         tit: "Ảnh ngày"
@@ -45,6 +46,14 @@ ApplicationWindow {
                         view.currentIndex = inx
                     }
                 }
+            }
+            Label {
+                id: zoomfocuslb
+                font.family: UIConstants.customFont
+                x: 5
+                y: 3
+                color: "white"
+                text: "Chế độ camera"
             }
 
             Rectangle {

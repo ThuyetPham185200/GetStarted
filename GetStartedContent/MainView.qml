@@ -53,7 +53,7 @@ Rectangle {
             x: 200
             y: 10
             color: "white"
-            text: "Camera Active"
+            text: "Chế độ camera"
         }
 
         VerticalMenu {

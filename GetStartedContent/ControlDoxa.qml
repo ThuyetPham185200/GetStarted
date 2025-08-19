@@ -7,6 +7,20 @@ Item {
     width: 600
     height: 400
 
+    Rectangle {
+        id: mode
+        anchors.left: parent.left
+        anchors.leftMargin: 5
+        anchors.right: parent.right
+        anchors.rightMargin: 5
+        anchors.top: parent.top
+        anchors.topMargin: 10
+        height: 148
+        color: UIConstants.transparentColor
+        radius: 2
+        border.color: UIConstants.genBorderColor
+    }
+
     Label {
         x: 40
         y: 44
@@ -37,7 +51,7 @@ Item {
 
     Label {
         x: 18
-        y: 8
+        y: 14
         width: 249
         height: 18
         color: "#37b29a"
@@ -62,8 +76,8 @@ Item {
 
     Button_ {
         id: button_2
-        x: 438
-        y: 79
+        x: 452
+        y: 80
         width: 85
         height: 30
         text: "Cập nhật"
@@ -131,7 +145,7 @@ Item {
 
     Label {
         x: 18
-        y: 176
+        y: 182
         width: 90
         height: 18
         color: "#37b29a"
@@ -142,16 +156,16 @@ Item {
 
     Button_ {
         id: button_3
-        x: 125
-        y: 170
+        x: 143
+        y: 176
         width: 85
         height: 30
         text: "Đo xa"
     }
 
     Label {
-        x: 38
-        y: 298
+        x: 40
+        y: 268
         width: 122
         height: 18
         color: "#37b29a"
@@ -161,8 +175,8 @@ Item {
     }
 
     Label {
-        x: 41
-        y: 374
+        x: 40
+        y: 343
         width: 112
         height: 18
         color: "#37b29a"
@@ -172,8 +186,8 @@ Item {
     }
 
     Label {
-        x: 41
-        y: 337
+        x: 40
+        y: 304
         width: 84
         height: 18
         color: "#37b29a"
@@ -185,7 +199,7 @@ Item {
 
     Label {
         x: 211
-        y: 298
+        y: 268
         width: 122
         height: 18
         color: "#37b29a"
@@ -197,7 +211,7 @@ Item {
 
     Label {
         x: 211
-        y: 337
+        y: 304
         width: 122
         height: 18
         color: "#37b29a"
@@ -209,7 +223,7 @@ Item {
 
     Label {
         x: 211
-        y: 374
+        y: 343
         width: 122
         height: 18
         color: "#37b29a"
@@ -221,7 +235,7 @@ Item {
 
     Label {
         x: 18
-        y: 223
+        y: 213
         width: 90
         height: 18
         color: "#37b29a"
@@ -233,25 +247,41 @@ Item {
 
     Label {
         x: 40
-        y: 257
+        y: 237
         width: 90
         height: 18
         color: "#37b29a"
         text: "Khoảng cách (m)"
         font.pixelSize: 14
-                font.family: UIConstants.customFont
+        font.family: UIConstants.customFont
 
     }
 
     Label {
         x: 211
-        y: 257
+        y: 237
         width: 122
         height: 18
         color: "#37b29a"
         text: "23.3456"
         font.pixelSize: 14
-                font.family: UIConstants.customFont
+        font.family: UIConstants.customFont
 
+    }
+
+    Rectangle {
+        id: mode1
+        height: 231
+        color: UIConstants.transparentColor
+        radius: 2
+        border.color: UIConstants.genBorderColor
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: mode.bottom
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 10
+        anchors.leftMargin: 5
+        anchors.rightMargin: 5
+        anchors.topMargin: 6
     }
 }

@@ -7,6 +7,19 @@ Item {
     width: 600
     height: 400
 
+    Rectangle {
+        id: mode
+        anchors.left: parent.left
+        anchors.leftMargin: 5
+        anchors.right: parent.right
+        anchors.rightMargin: 5
+        anchors.top: parent.top
+        anchors.topMargin: 10
+        height: 75
+        color: UIConstants.transparentColor
+        radius: 2
+        border.color: UIConstants.genBorderColor
+    }
     Label {
         x: 27
         y: 248
@@ -137,6 +150,8 @@ Item {
         text: "Đừng tất cả"
     }
 
+
+
     Label {
         x: 50
         y: 285
@@ -226,7 +241,7 @@ Item {
         color: "#37b29a"
         text: "0.00"
         font.pixelSize: 14
-                font.family: UIConstants.customFont
+        font.family: UIConstants.customFont
 
     }
 
@@ -238,8 +253,37 @@ Item {
         color: "#37b29a"
         text: "0.00"
         font.pixelSize: 14
-                font.family: UIConstants.customFont
+        font.family: UIConstants.customFont
 
+    }
+
+    Rectangle {
+        id: mode1
+        height: 136
+        color: UIConstants.transparentColor
+        radius: 2
+        border.color: UIConstants.genBorderColor
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.leftMargin: 5
+        anchors.rightMargin: 5
+        anchors.topMargin: 91
+    }
+
+    Rectangle {
+        id: mode2
+        color: UIConstants.transparentColor
+        radius: 2
+        border.color: UIConstants.genBorderColor
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: mode1.bottom
+        anchors.leftMargin: 5
+        anchors.rightMargin: 5
+        anchors.topMargin: 5
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 10
     }
 
 

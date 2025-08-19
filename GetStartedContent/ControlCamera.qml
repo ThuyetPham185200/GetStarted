@@ -162,8 +162,8 @@ Item {
 
     VerticalMenu {
         id: verticalMenu
-        x: 0
-        y: 0
+        x: 111
+        y: 1
         Connections {
             target: verticalMenu
             function onSelected(index) {
@@ -176,5 +176,16 @@ Item {
         }
     }
 
+    Label {
+        x: 8
+        y: 4
+        width: 104
+        height: 18
+        color: "white"
+        text: "Chế độ Camera"
+        font.pixelSize: 14
+                font.family: UIConstants.customFont
+
+    }
 
 }

@@ -7,64 +7,95 @@ Item {
     width: 600
     height: 400
 
-    Label {
-        x: 23
-        y: 172
-        width: 128
-        height: 18
-        color: "#37b29a"
-        text: "Joystich Ảo"
-        font.pixelSize: 14
-                font.family: UIConstants.customFont
+    Rectangle {
+        id: mode
+        anchors.left: parent.left
+        anchors.leftMargin: 5
+        anchors.right: parent.right
+        anchors.rightMargin: 5
+        anchors.top: parent.top
+        anchors.topMargin: 10
+        height: 222
+        color: UIConstants.transparentColor
+        radius: 2
+        border.color: UIConstants.genBorderColor
 
-    }
+        Label {
+            x: 24
+            y: 10
+            width: 128
+            height: 18
+            color: "#37b29a"
+            text: "Joystich Ảo"
+            font.pixelSize: 14
+                    font.family: UIConstants.customFont
 
-    VirtualJoystick {
-        id: virtualJoystick
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 210
-        anchors.horizontalCenterOffset: 0
-    }
+        }
 
-    Label {
-        x: 23
-        y: 18
-        width: 128
-        height: 18
-        color: "#37b29a"
-        text: "Chọn chế độ Zoom/EO"
-        font.pixelSize: 14
-                font.family: UIConstants.customFont
-
+        VirtualJoystick {
+            id: virtualJoystick
+            anchors.horizontalCenter: parent.horizontalCenter
+            y: 69
+            anchors.horizontalCenterOffset: -1
+        }
     }
 
     Rectangle {
-        x: 23
-        y: 62
-        width: 217
-        height: 66
-        color: "#00000000"
+        id: js
+        anchors.left: parent.left
+        anchors.leftMargin: 5
+        anchors.right: parent.right
+        anchors.rightMargin: 5
+        anchors.top: mode.bottom
+        anchors.topMargin: 10
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 15
+        color: UIConstants.transparentColor
         radius: 2
-        border.color: "#37b293"
+        border.color: UIConstants.genBorderColor
 
-        RadioButton_ {
-            id: radioButton_4
-            x: 10
-            y: 20
-            width: 82
-            height: 25
-            text: "Zoom"
+
+        Label {
+            x: 23
+            y: 18
+            width: 147
+            height: 18
+            color: "#37b29a"
+            text: "Chọn chế độ Zoom/EO"
+            font.pixelSize: 14
+                    font.family: UIConstants.customFont
+
         }
 
-        RadioButton_ {
-            id: radioButton_5
-            x: 133
-            y: 20
-            width: 82
-            height: 25
-            text: "Focus"
+        Rectangle {
+            x: 23
+            y: 62
+            width: 217
+            height: 66
+            color: "#00000000"
+            radius: 2
+            border.color: "#37b293"
+
+            RadioButton_ {
+                id: radioButton_4
+                x: 10
+                y: 20
+                width: 82
+                height: 25
+                text: "Zoom"
+            }
+
+            RadioButton_ {
+                id: radioButton_5
+                x: 133
+                y: 20
+                width: 82
+                height: 25
+                text: "Focus"
+            }
         }
     }
+
 
 
 }

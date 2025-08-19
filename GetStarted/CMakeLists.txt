@@ -24,11 +24,11 @@ qt6_add_qml_module(GetStarted
     VERSION 1.0
     RESOURCE_PREFIX "/qt/qml"
 	QML_FILES
-		"ScreenTools.qml"
 		"EventListModel.qml"
-		"DirectoryFontLoader.qml"
-		"UIConstants.qml"
 		"Constants.qml"
+		"DirectoryFontLoader.qml"
+		"ScreenTools.qml"
+		"UIConstants.qml"
 		"EventListSimulator.qml"
 )
 
