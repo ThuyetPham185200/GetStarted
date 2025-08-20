@@ -5,12 +5,12 @@ import GetStarted
 
 ApplicationWindow {
     id: root
-    title: "Thiết bị"
     width: 1000
-    height: 800
-    minimumHeight: 800
+    height: 850
+    title: "Thiết bị"
+    minimumHeight: height
     minimumWidth: 1000
-    maximumHeight: 800
+    maximumHeight: height
     maximumWidth: 1000
     Rectangle {
         id: bg
@@ -21,7 +21,7 @@ ApplicationWindow {
             x: 28
             y: 27
             width: 943
-            height: 435
+            height: 485
             color: UIConstants.transparentColor
             border.color: UIConstants.genBorderColor
             VerticalMenu {
@@ -56,85 +56,18 @@ ApplicationWindow {
                 text: "Chế độ camera"
             }
 
-            Rectangle {
-                id: autofocus
-                x: 422
-                y: 55
-                width: 50
-                height: 45
-                color: UIConstants.transparentColor
-                border.color: UIConstants.genBorderColor
-            }
 
-            Rectangle {
-                id: zoom
-                x: 8
-                y: 55
-                width: 402
-                height: 45
-                color: UIConstants.transparentColor
-                border.color: UIConstants.genBorderColor
-                BalancedSlider {
-                    id: balancedSlider
-                    x: 57
-                    y: 16
-                    width: 337
-                    height: 12
-                }
-
-                Image {
-                    id: focus1
-                    x: 483
-                    y: 5
-                    source: "icons/Focus.svg"
-                    fillMode: Image.PreserveAspectFit
-                }
-            }
-
-            Rectangle {
-                id: focus_
-                x: 483
-                y: 55
-                width: 452
-                height: 45
-                color: UIConstants.transparentColor
-                border.color: UIConstants.genBorderColor
-                BalancedSlider {
-                    id: balancedSlider1
-                    x: 52
-                    y: 17
-                    width: 390
-                    height: 12
-                }
-            }
-
-            Image {
-                id: aFocus
-                x: 430
-                y: 55
-                source: "icons/AFocus.svg"
-                fillMode: Image.PreserveAspectFit
-            }
-
-            Image {
-                id: zoom1
-                x: 16
-                y: 61
-                source: "icons/Zoom.svg"
-                fillMode: Image.PreserveAspectFit
-            }
 
 
             StackLayout {
                 id: view
-                anchors.top: zoom1.bottom
-                anchors.topMargin: 25
+                anchors.top: verticalMenu.bottom
                 anchors.bottomMargin: 8
                 anchors.left: parent.left
-                anchors.leftMargin: 25
+                anchors.leftMargin: 10
                 anchors.bottom: parent.bottom
                 anchors.right: parent.right
-                anchors.rightMargin: 25
+                anchors.rightMargin: 10
 
                 ControlEOCameraDevice {
                 }
@@ -147,7 +80,7 @@ ApplicationWindow {
         Rectangle {
             id: gimbal
             x: 28
-            y: 474
+            y: camera.height + 40
             width: 351
             height: 296
             color: UIConstants.transparentColor
@@ -362,7 +295,7 @@ ApplicationWindow {
         Rectangle {
             id: laser
             x: 393
-            y: 474
+             y: camera.height + 40
             width: 436
             height: 296
             color: UIConstants.transparentColor
@@ -382,7 +315,7 @@ ApplicationWindow {
         Rectangle {
             id: extend_
             x: 843
-            y: 474
+             y: camera.height + 40
             width: 128
             height: 296
             color: UIConstants.transparentColor

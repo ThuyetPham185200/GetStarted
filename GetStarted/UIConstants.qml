@@ -20,6 +20,7 @@ QtObject {
     //------------------------ Material params ---------------------
     property bool darkTheme: false
     property int appAccent: Material.DeepOrange
+    property real lowOpacity: 0.2
 
     //------------------ Notification type messages color ----------
     property color success
@@ -156,7 +157,6 @@ QtObject {
     readonly property color blueGray:  "#0D1117"
     readonly property color dackerOliveDrab: "#1F2125"//UIConstants.dackerOliveDrab
     readonly property color whitesmoke: "#1F2125"//UIConstants.dackerOliveDrab
-
 
     //------- Text
     property color warningColor
